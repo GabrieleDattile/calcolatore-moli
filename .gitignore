@@ -1,52 +1,31 @@
-# Prerequisites
-*.d
+#include <stdio.h>
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+int main() {
+    // Definizione di costanti
+    const double numeroAvogadro = 6.022e23;
 
-# Linker output
-*.ilk
-*.map
-*.exp
+    // Dichiarazione di variabili
+    double massaMolecolare;
+    double massa;
+    double moles;
 
-# Precompiled Headers
-*.gch
-*.pch
+    // Input della massa molecolare da parte dell'utente
+    printf("Inserisci la massa molecolare (in g/mol): ");
+    scanf("%lf", &massaMolecolare);
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+    // Input della massa da parte dell'utente
+    printf("Inserisci la massa della sostanza (in g): ");
+    scanf("%lf", &massa);
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+    // Calcolo delle moli utilizzando la formula delle mole: moli = massa / massa molecolare
+    moles = massa / massaMolecolare;
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+    // Calcolo del numero di entità elementari utilizzando la costante di Avogadro: entità = moli * numeroAvogadro
+    double entita = moles * numeroAvogadro;
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+    // Output dei risultati
+    printf("Moli: %.4lf\n", moles);
+    printf("Numero di entità elementari: %.4lf\n", entita);
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+    return 0;
+}
