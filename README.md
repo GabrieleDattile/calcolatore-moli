@@ -1,4 +1,4 @@
-Calcolatore di Moli e Numero di Entità Elementari
+# Calcolatore di Moli e Numero di Entità Elementari
 
 Questo è un programma in linguaggio C che calcola il numero di moli e il numero di entità elementari (avogadro) a partire dalla massa molecolare e dalla massa di una sostanza.
 Istruzioni per l'uso
